@@ -9,6 +9,7 @@ jobs:
       - run:
           name: "Commands"
           command: |
+            npm install -g npm@2
             mkdir -p prism/bin
             ./test/prism.sh
             npm test
