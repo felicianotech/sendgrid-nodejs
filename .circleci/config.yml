@@ -10,7 +10,7 @@ jobs:
           name: "Commands"
           command: |
             echo 'PATH=$PWD/prism/bin:$PATH' >> $BASH_ENV
-            npm install -g npm@2
+            npm install
             mkdir -p prism/bin
             ./test/prism.sh
             npm test
