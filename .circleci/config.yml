@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: node:7
+    working_directory: ~/project
+    steps:
+      - checkout
+      - run:
+          name: "Commands"
+          command: |
+            mkdir -p prism/bin
+            ./test/prism.sh
+            npm test
+            npm run test:typescript
